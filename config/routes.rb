@@ -2,6 +2,9 @@ V1::Application.routes.draw do
   
   root :to => 'home#index'
   
+  resources :blogs
+  resources :portfolios
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
