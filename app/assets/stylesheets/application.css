@@ -16,4 +16,5 @@
  *= require_style
  *= require_self
  *= require_tree .
+ *= require_ui
  */
