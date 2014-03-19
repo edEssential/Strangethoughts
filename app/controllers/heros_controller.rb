@@ -1,5 +1,5 @@
 class HerosController < ApplicationController
-  #before_filter :authenticate_user!
+  before_filter :authenticate_user!
 
     def new
       @hero = Hero.new
