@@ -20,7 +20,6 @@
 //= require animate
 //= require jquery.BlackAndWhite
 //= require myscript
-//= require jquery.ui.all
 
 //PrettyPhoto
 jQuery(document).ready(function() {

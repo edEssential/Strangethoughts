@@ -1,0 +1,21 @@
+<section id="formBacker">
+	<div class="container">
+		
+		<div id="cmsHeader">
+			<h2 id="cmsTitle">Sing Up</h2>
+		</div>
+		
+		<div class="formWrapper">
+			<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+				<%= devise_error_messages! %>
+				<%= f.label :email, class: "formText" %><br/>
+    			<%= f.email_field :email, :autofocus => true, class: 'text-area' %><br /><br />
+				<%= f.label :password, class: "formText" %><br/>
+	    		<%= f.password_field :password, class: 'text-areaArea' %><br /><br />
+				<%= f.label :password_confirmation, class: "formText" %><br/>
+	    		<%= f.password_field :password_confirmation, class: 'text-areaArea' %><br /><br />
+	    		<%= f.submit %>
+			<% end %>
+		</div>
+	</div>
+</section>

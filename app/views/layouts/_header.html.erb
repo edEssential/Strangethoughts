@@ -1,36 +1,54 @@
-<header>
+<% if controller.controller_name == 'home' && controller.action_name == 'index' %>
+
+	<header>
 	
-	<!-- MENU BLOCK -->
-	<div class="menu_block">
+		<!-- MENU BLOCK -->
+		<div class="menu_block">
 	
-		<!-- CONTAINER -->
-		<div class="container clearfix">
+			<!-- CONTAINER -->
+			<div class="container clearfix">
 			
-			<!-- LOGO -->
-			<div class="logo pull-left">
-				<%= link_to image_tag('logo.png'), root_path %>
-			</div><!-- //LOGO -->
+				<!-- LOGO -->
+				<div class="logo pull-left">
+					<%= link_to image_tag('logo.png'), root_path %>
+				</div><!-- //LOGO -->
+				
+				<% if user_signed_in? %>
+					<div class="userInfo">
+						<div>{ Logged in as <strong><%= current_user.email %></strong> }</div>
+						<div class="deviseLinks">
+						<%= link_to 'Edit', edit_user_registration_path %> | <%= link_to 'Logout', destroy_user_session_path, method: :delete %></div>
+					</div>
+				<% end %>
 			
-			<!-- SEARCH FORM -->
-			<!--<div id="search-form" class="pull-right">
-				<form method="get" action="#">
-					<input type="text" name="Search" value="Search" onFocus="if (this.value == 'Search') this.value = '';" onBlur="if (this.value == '') this.value = 'Search';" />
-				</form>
-			</div>--><!-- SEARCH FORM -->
+				<!-- SEARCH FORM -->
+				<!--<div id="search-form" class="pull-right">
+					<form method="get" action="#">
+						<input type="text" name="Search" value="Search" onFocus="if (this.value == 'Search') this.value = '';" onBlur="if (this.value == '') this.value = 'Search';" />
+					</form>
+				</div>--><!-- SEARCH FORM -->
 			
-			<!-- MENU -->
-			<div class="pull-right">
-				<nav class="navmenu center">
-					<ul>
-						<li class="first active scroll_btn"><a href="#home" >Home</a></li>
-						<li class="scroll_btn"><a href="#about">About Us</a></li>
-						<li class="scroll_btn"><a href="#projects">Our Work</a></li>
-						<li class="scroll_btn"><a href="#clients">Clients</a></li>
-						<li class="scroll_btn"><a href="#team">Start-Ups</a></li>
-						<li><%= link_to 'From The Lab', blogs_path %></li>
-					</ul>
-				</nav>
-			</div><!-- //MENU -->
-		</div><!-- //MENU BLOCK -->
-	</div><!-- //CONTAINER -->
-</header><!-- //HEADER -->
+				<!-- MENU -->
+				<div class="pull-right">
+					<nav class="navmenu center">
+						<ul>
+							<li class="first active scroll_btn"><a href="#home" >Home</a></li>
+							<li class="scroll_btn"><a href="#about">About Us</a></li>
+							<li class="scroll_btn"><a href="#projects">Our Work</a></li>
+							<li class="scroll_btn"><a href="#clients">Clients</a></li>
+							<li class="scroll_btn"><a href="#team">Start-Ups</a></li>
+							<li class="scroll_btn"><%= link_to 'From The Lab', blogs_path %></li>
+							<li class="scroll_btn"><% if user_signed_in? %>
+								<%= link_to "CMS", cms_path %>
+							<% end %>
+							</li>
+						</ul>
+					</nav>
+				</div><!-- //MENU -->
+			</div><!-- //MENU BLOCK -->
+		</div><!-- //CONTAINER -->
+	</header><!-- //HEADER -->
+<!-- End Navigation -->
+<% else %>
+	<div class="navigation-alt">&nbsp;</div>
+<% end %>

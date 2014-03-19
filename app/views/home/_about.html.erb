@@ -2,42 +2,38 @@
 	
 	<!-- SERVICES -->
 	<div class="services_block padbot40" data-appear-top-offset="-200" data-animated="fadeInUp">
-		
 		<!-- CLEAN CODE -->
 		<div class="cleancode_block">
-
 			<!-- CONTAINER -->
 			<div class="container" data-appear-top-offset="-200" data-animated="fadeInUp">
-
 				<!-- CASTOM TAB -->
 				<div id="myTabContent" class="tab-content">
 					<div class="tab-pane fade in active clearfix" id="tab1">
-						<p class="title"><b>A New</b> Model</p>
-						<span>True innovation cannot exist in a department, a 'head of' or even a Sandpit - true innovation takes an innovative approach to creative thinking.</span>
+						<% begString = @abouttb1.title.split(" ").first(2).join(" ") %>
+						<% endString = @abouttb1.title.split(" ").last(1).join(" ") %>
+						<p class="title"><b><%= begString %></b> <%= endString %></p>
+						<span><%= @abouttb1.content %></span>
 					</div>
-					<div class="tab-pane fade clearfix" id="tab2">
-						<p class="title"><b>The</b> Network</p>
-						<span>We spend time getting to know some very Strange Thinkers, including leading academics, programmers, artists, inventors, and even magicians.</span>
-					</div>
-					<div class="tab-pane fade clearfix" id="tab3">
-						<p class="title"><b>Collective</b> Creativity</p>
-						<span>True innovation involves breaking down the barriers of comfortable expertise, and by driving collaboration between different disciplines we harness world class creative thinking.</span>
-					</div>
-					<div class="tab-pane fade clearfix" id="tab4">
-						<p class="title"><b>Our</b> Clients</p>
-						<span>We work with bold marketers who want to shake up the way they do things; people who understand that innovation can’t happen without leaving your office</span>
-					</div>
-					<div class="tab-pane fade clearfix" id="tab5">
-						<p class="title"><b>The</b> Creators</p>
-						<span>We provide a global stage and revenue for our creators work through our understanding of the commercial needs and processes of large corporate brands and agencies.</span>
-					</div>
+					<% @abouttbs.each do |atb| %>
+					
+						<% originalString = atb.title %>
+						<% stringCount = originalString.split(" ").count %>
+
+						<% begString = originalString.split(" ").first(1).join(" ") %>
+						<% endString = originalString.split(" ").last(stringCount - 1).join(" ") %>
+						
+						<div class="tab-pane fade clearfix" id="tab<%= atb.id %>">
+							<p class="title"><b><%= begString %></b> <%= endString %></p>
+							<span><%= atb.content %></span>
+						</div>
+						
+					<% end %>
 				</div>
 				<ul id="myTab" class="nav nav-tabs">
-					<li class="active"><a class="i1" href="#tab1" data-toggle="tab" ><i></i><span>A New Model</span></a></li>
-					<li><a class="i2" href="#tab2" data-toggle="tab" ><i></i><span>The Network</span></a></li>
-					<li><a class="i3" href="#tab3" data-toggle="tab" ><i></i><span>Collective Creativity</span></a></li>
-					<li><a class="i4" href="#tab4" data-toggle="tab" ><i></i><span>Our Clients</span></a></li>
-					<li><a class="i5" href="#tab5" data-toggle="tab" ><i></i><span>The Creators</span></a></li>
+					<li class="active"><a class="i1" href="#tab1" data-toggle="tab" ><i></i><span><%= @abouttb1.title %></span></a></li>
+					<% @abouttbs.each do |atb| %>
+						<li><a class="i<%= atb.id %>" href="#tab<%= atb.id %>" data-toggle="tab" ><i></i><span><%= atb.title %></span></a></li>
+					<% end %>
 				</ul><!-- CASTOM TAB -->
 			</div><!-- //CONTAINER -->
 		</div><!-- //CLEAN CODE -->
@@ -47,30 +43,18 @@
 		
 			<!-- ROW -->
 			<div class="row">
-				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-ss-12 margbot30">
-					<a class="services_item" href="javascript:void(0);" >
-						<p><b>Brand</b> Communication</p>
-						<span>Proposition and Campaign design, launch, management and tracking.</span>
-					</a>
-				</div>
-				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-ss-12 margbot30">
-					<a class="services_item" href="javascript:void(0);" >
-						<p><b>Content</b> Creation</p>
-						<span>From text to video, to interactive and beyond.</span>
-					</a>
-				</div>
-				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-ss-12 margbot30">
-					<a class="services_item" href="javascript:void(0);" >
-						<p><b>Insight</b>  &amp; Analysis</p>
-						<span>Brand strategy, consultancy and workshops.</span>
-					</a>
-				</div>
-				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-ss-12 margbot30">
-					<a class="services_item" href="javascript:void(0);" >
-						<p><b>Mobile</b> Technology</p>
-						<span>App innovation, proposition and development cross-platform.</span>
-					</a>
-				</div>
+				<% @aboutbbs.each do |abb| %>
+				
+					<% begString = abb.title.split(" ").first(1).join(" ") %>
+					<% endString = abb.title.split(" ").last(1).join(" ") %>
+				
+					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-ss-12 margbot30">
+						<a class="services_item" href="javascript:void(0);" >
+							<p><b><%= begString %></b> <%= endString %></p>
+							<span><%= abb.content %></span>
+						</a>
+					</div>
+				<% end %>
 			</div><!-- //ROW -->
 		</div><!-- //CONTAINER -->
 	</div><!-- //SERVICES -->

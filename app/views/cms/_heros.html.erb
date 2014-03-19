@@ -1,0 +1,32 @@
+<div class="cmsWrapper">
+	<div class="releases">
+		<div class="divHeader">Heros</div>
+		<div class="tableWrapper">
+			<div class="tableContent">
+				<% if @heros.count > 0 %>
+					<table width="100%">
+						<tr class="tableHeader">
+							<th>TITLE</th>
+							<th>DESCRIPTION</th>
+						</tr>
+						<tr><hr class="ruler"/></tr>
+						<% @heros.each do |h| %>
+							<tr class="tableRow">
+								<td width="15%"><%= h.slide_title %></td>
+								<td width="80%"><%= h.slide_content %></td>
+								<td width="5%"><%= link_to image_tag('edit2.png'), edit_hero_path(h), class: "edit" %></td>
+							</tr>
+						<% end %>
+					</table>
+				<% else %>
+					<table width="100%"><tr class="tableRow empty"><td><em>YOU HAVE NO HEROS YET... ADD SOME BELOW ?!</em></td></tr></table>
+				<% end %>
+			</div>
+		</div>
+	</div>
+	<h6>
+	<input type="hidden" value="videos" class="modal-model-type">
+	<% if @heros.count < 3 %>
+	<h6><%= link_to 'Add new hero', new_hero_path, :class => "darkButton2" %></h6>
+	<% end %>
+</div>

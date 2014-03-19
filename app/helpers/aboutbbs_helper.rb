@@ -1,0 +1,2 @@
+module AboutbbsHelper
+end

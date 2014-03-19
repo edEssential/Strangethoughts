@@ -15,6 +15,6 @@
  *= require_owl.carousel
  *= require_style
  *= require_self
+ *= require_cms
  *= require_tree .
- *= require_ui
  */

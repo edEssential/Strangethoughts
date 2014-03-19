@@ -1,0 +1,26 @@
+<section id="formBacker">
+	<div class="container">
+		
+		<div id="cmsHeader">
+			<h2 id="cmsTitle">Edit <%= resource_name.to_s.humanize %></h2>
+		</div>
+		
+		<div class="formWrapper">
+			<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
+		 		<%= devise_error_messages! %>
+				<%= f.label :email, class: "formText" %><br/>
+    			<%= f.email_field :email, :autofocus => true, class: 'text-area' %><br /><br />
+				<% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+				    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+				<% end %>
+				<%= f.label :password, class: "formText" %><br/>
+	    		<%= f.password_field :password, class: 'text-areaArea' %><br /><br />
+				<%= f.label :password_confirmation, class: "formText" %><br/>
+	    		<%= f.password_field :password_confirmation, class: 'text-areaArea' %><br /><br />
+				<%= f.label :current_password, class: "formText" %><br/>
+	    		<%= f.password_field :current_password, class: 'text-areaArea' %><br /><br />
+	    		<%= f.submit "Update" %>
+			<% end %>
+		</div>
+	</div>
+</section>

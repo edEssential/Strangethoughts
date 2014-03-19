@@ -4,30 +4,33 @@
 	<!-- TOP SLIDER -->
 	<div class="flexslider top_slider">
 		<ul class="slides">
-			<li class="slide1">
-				<div class="flex_caption1">
-					<p class="title1 captionDelay2 FromTop">What&#160;</p>
-					<p class="title2 captionDelay4 FromTop">we do</p>
-					<p class="title4 captionDelay7 FromBottom">We deliver amazing ideas, creative, propositions, executions and results to bold brands. Try us. It will work.</p>
-				</div>
-			<li class="slide2">
-				<div class="flex_caption1">
-					<p class="title1 captionDelay6 FromLeft">Who&#160;</p>
-					<p class="title2 captionDelay4 FromLeft">we work with</p>
-					<p class="title4 captionDelay7 FromLeft">We work only with the most innovative brand partners to deliver bold propositions, campaigns and executions.</p>
-				</div>
-			</li>
-			<li class="slide3">
-				<div class="flex_caption1">
-					<p class="title1 captionDelay1 FromBottom">How&#160;</p>
-					<p class="title2 captionDelay2 FromBottom">we do it</p>
-					<p class="title4 captionDelay5 FromBottom">We have a unique model of crowd-sourced expertise from the cutting edge of technology and creative. </p>
-				</div>
+			<% @heros.each do |h| %>
+			
+				<% originalString = h.slide_title %>
+				<% stringCount = originalString.split(" ").count %>
+			
+				<% begString = originalString.split(" ").first(1).join(" ") %>
+				<% endString = originalString.split(" ").last(stringCount - 1).join(" ") %>
 				
-				<!-- VIDEO BACKGROUND -->
-				<!--><a id="P2" class="player" data-property="{videoURL:'tDvBwPzJ7dY',containment:'.top_slider .slide3',autoPlay:true, mute:true, startAt:0, opacity:1}" ></a>-->
-				<!-- //VIDEO BACKGROUND -->
-			</li>
+				<li class="slide<%= h.id %>">
+					<div class="flex_caption1">
+						<% if h.id == 1 %>
+							<p class="title1 captionDelay2 FromTop"><%= begString %>&#160;</p>
+							<p class="title2 captionDelay4 FromLeft"><%= endString %></p>
+							<p class="title4 captionDelay7 FromBottom"><%= h.slide_content %></p>
+						<% elsif h.id == 2 %>
+							<p class="title1 captionDelay2 FromLeft"><%= begString %>&#160;</p>
+							<p class="title2 captionDelay4 FromLeft"><%= endString %></p>
+							<p class="title4 captionDelay7 FromLeft"><%= h.slide_content %></p>
+						<% else %>
+							<p class="title1 captionDelay2 FromBottom"><%= begString %>&#160;</p>
+							<p class="title2 captionDelay4 FromBottom"><%= endString %></p>
+							<p class="title4 captionDelay7 FromBottom"><%= h.slide_content %></p>
+						<% end %>
+					</div>
+				</li>
+			
+			<% end %>
 		</ul>
 	</div>
 	<div id="carousel">
@@ -38,3 +41,7 @@
 		</ul>
 	</div><!-- //TOP SLIDER -->
 </section><!-- //HOME -->
+
+<!-- VIDEO BACKGROUND
+	<a id="P2" class="player" data-property="{videoURL:'tDvBwPzJ7dY',containment:'.top_slider .slide3',autoPlay:true, mute:true, startAt:0, opacity:1}" ></a>
+//VIDEO BACKGROUND -->

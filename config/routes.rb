@@ -1,9 +1,15 @@
 V1::Application.routes.draw do
   
+  devise_for :users, path: "auth", path_names: { sign_out: 'logout', sign_in: 'login', sign_up: 'create_new_stranger' }
+
   root :to => 'home#index'
   
   resources :blogs
   resources :portfolios
+  resources :heros
+  resources :cms
+  resources :abouttbs
+  resources :aboutbbs
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

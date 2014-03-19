@@ -1,0 +1,32 @@
+<div class="cmsWrapper">
+	<div class="releases">
+		<div class="divHeader">About - Bottom Blocks</div>
+		<div class="tableWrapper">
+			<div class="tableContent">
+				<% if @aboutbbs.count > 0 %>
+					<table width="100%">
+						<tr class="tableHeader">
+							<th>TITLE</th>
+							<th>DESCRIPTION</th>
+						</tr>
+						<tr><hr class="ruler"/></tr>
+						<% @aboutbbs.each do |atb| %>
+							<tr class="tableRow">
+								<td width="20%"><%= atb.title %></td>
+								<td width="75%"><%= atb.content %></td>
+								<td width="5%"><%= link_to image_tag('edit2.png'), edit_aboutbb_path(atb), class: "edit" %></td>
+							</tr>
+						<% end %>
+					</table>
+				<% else %>
+					<table width="100%"><tr class="tableRow empty"><td><em>YOU HAVE NO BOTTOM BLOCKS YET... ADD SOME BELOW ?!</em></td></tr></table>
+				<% end %>
+			</div>
+		</div>
+	</div>
+	<h6>
+	<input type="hidden" value="videos" class="modal-model-type">
+	<% if @aboutbbs.count < 5 %>
+	<h6><%= link_to 'Add new about bottom block', new_aboutbb_path, :class => "darkButton2" %></h6>
+	<% end %>
+</div>
