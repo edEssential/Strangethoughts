@@ -53,6 +53,8 @@ GEM
     hike (1.2.3)
     i18n (0.6.1)
     journey (1.0.4)
+    jquery-ui-rails (4.1.2)
+      railties (>= 3.1.0)
     json (1.8.1)
     mail (2.5.4)
       mime-types (~> 1.16)
@@ -130,6 +132,7 @@ DEPENDENCIES
   auto_html
   aws-sdk
   coffee-rails (~> 3.2.1)
+  jquery-ui-rails
   paperclip
   pg (= 0.15.1)
   rails (= 3.2.13)
