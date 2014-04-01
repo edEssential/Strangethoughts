@@ -19,19 +19,19 @@
 #cmsHeader {text-align:center;}
 #cmsTitle {color:#e5e5e5!important;margin-top:35px;padding-bottom:20px;}
 .text-area, .text-areaArea {
-    border:none;outline:none;
-    width:80%;margin:5px 0px 0px 10%;padding:10px;
-    background: #202326;color: #ffffff;
-    -webkit-appearance: none;
+	height:35px;
+	width:60%!important;
+	margin-left:20%!important;
+	background-color:#202326!important;
+	color:#ffffff!important;
+	-webkit-appearance: none;
     -webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;
 }
-.text-area, .text-areaArea {
-	height:35px;
-}
+.formImage {width:30%;margin:10px 0px -10px 35%;}
 .formText, .formTitle {
 	font-size:17px;
 	width:80%;
-	margin:10px 10%;
+	margin:5px 10%;
 	font-family:"Open Sans";
 	text-align:center;
 }
@@ -39,3 +39,4 @@
 	height:0;
 	margin:0;
 }
+.text-areaArea {height:200px;}

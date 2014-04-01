@@ -10,6 +10,7 @@ V1::Application.routes.draw do
   resources :cms
   resources :abouttbs
   resources :aboutbbs
+  resources :projects
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

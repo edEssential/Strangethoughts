@@ -1,6 +1,4 @@
 <section id="projects" class="padbot20">
-	
-	<div id="aboutBanner"><%= image_tag("aboutBanner.png") %></div><br /><br />
 
 	<!-- CONTAINER -->
 	<div class="container">
@@ -12,11 +10,12 @@
 		<div class="owl-demo owl-carousel projects_slider">
 			
 			<!-- work1 -->
+			<% @projects.each do |p| %>
 			<div class="item">
 				<div class="work_item">
 					<div class="work_img">
-						<img src="assets/works/beercase.png" alt="" />
-						<a class="zoom" href="assets/works/beercase.png" rel="prettyPhoto[portfolio1]" ></a>
+						<%= image_tag p.image.url(:medium) %>
+						<a class="zoom" href="<%= p.image.url(:medium) %>" rel="prettyPhoto[portfolio1]" ></a>
 					</div>
 					<div class="work_description">
 						<div class="work_descr_cont">
@@ -26,70 +25,7 @@
 					</div>
 				</div>
 			</div><!-- //work1 -->
-			
-			<!-- work2 -->
-			<div class="item">
-				<div class="work_item">
-					<div class="work_img">
-						<img src="assets/works/danceroomcase.png" alt="" />
-						<a class="zoom" href="assets/works/danceroomcase.png" rel="prettyPhoto[portfolio1]" ></a>
-					</div>
-					<div class="work_description">
-						<div class="work_descr_cont">
-							<a href="portfolio-post.html" >Beer and Particle Physics</a>
-							<span>17 March, 2041</span>
-						</div>
-					</div>
-				</div>
-			</div><!-- //work2 -->
-			
-			<!-- work3 -->
-			<div class="item">
-				<div class="work_item">
-					<div class="work_img">
-						<img src="assets/works/pocketspacecase.png" alt="" />
-						<a class="zoom" href="assets/works/pocketspacecase.png" rel="prettyPhoto[portfolio1]" ></a>
-					</div>
-					<div class="work_description">
-						<div class="work_descr_cont">
-							<a href="portfolio-post.html" >Pocket Spacecraft</a>
-							<span>17 March, 2041</span>
-						</div>
-					</div>
-				</div>
-			</div><!-- //work3 -->
-			
-			<!-- work4 -->
-			<div class="item">
-				<div class="work_item">
-					<div class="work_img">
-						<img src="assets/works/reebokcase.png" alt="" />
-						<a class="zoom" href="assets/works/reebokcase.png" rel="prettyPhoto[portfolio1]" ></a>
-					</div>
-					<div class="work_description">
-						<div class="work_descr_cont">
-							<a href="portfolio-post.html" >Reebok 'I Am Classic'</a>
-							<span>17 March, 2041</span>
-						</div>
-					</div>
-				</div>
-			</div><!-- //work4 -->
-			
-			<!-- work5 -->
-			<div class="item">
-				<div class="work_item">
-					<div class="work_img">
-						<img src="assets/works/pokercase.png" alt="" />
-						<a class="zoom" href="assets/works/pokercase.png" rel="prettyPhoto[portfolio1]" ></a>
-					</div>
-					<div class="work_description">
-						<div class="work_descr_cont">
-							<a href="portfolio-post.html" >PokerStars: EPT Live</a>
-							<span>17 March, 2041</span>
-						</div>
-					</div>
-				</div>
-			</div><!-- //work5 -->
+			<% end %>
 		</div><!-- //PROJECTS SLIDER -->
 	</div>
 </section><!-- //PROJECTS -->

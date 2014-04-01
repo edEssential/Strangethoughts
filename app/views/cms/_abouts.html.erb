@@ -12,9 +12,9 @@
 						</tr>
 						<tr><hr class="ruler"/></tr>
 						<% @abouttbsall.each do |atb| %>
-							<tr class="tableRowBig">
-								<td width="15%"><%= atb.title %></td>
-								<td width="80%"><%= atb.content %></td>
+							<tr class="tableRow">
+								<td width="20%"><%= atb.title %></td>
+								<td width="75%"><%= truncate (atb.content), length: 100, :separator => '.' %></td>
 								<td width="5%"><%= link_to image_tag('edit2.png'), edit_abouttb_path(atb), class: "edit" %></td>
 							</tr>
 						<% end %>
@@ -31,9 +31,9 @@
 						</tr>
 						<tr><hr class="ruler"/></tr>
 						<% @aboutbbs.each do |abb| %>
-							<tr class="tableRowBig">
-								<td width="15%"><%= abb.title %></td>
-								<td width="80%"><%= abb.content %></td>
+							<tr class="tableRow">
+								<td width="20%"><%= abb.title %></td>
+								<td width="75%"><%= truncate (abb.content), length: 100, :separator => '.' %></td>
 								<td width="5%"><%= link_to image_tag('edit2.png'), edit_aboutbb_path(abb), class: "edit" %></td>
 							</tr>
 						<% end %>
