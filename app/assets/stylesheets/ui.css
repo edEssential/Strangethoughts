@@ -16,7 +16,6 @@
 #nextArrow img, #prevArrow img {max-width:100%;}
 #nextArrow {margin:-4px 0px 0px 50px;}
 #prevArrow {margin:-3px 0px 0px -75px;}
-#nextArrow, .#prevArrow {}
 .click {padding:0px 10px!important;}
 .big {font-size:20px;line-height:26px;color:#e7e7e7;width:310px;}
 .medium {font-size:16px;line-height:18px;color:#e7e7e7;}
