@@ -16,6 +16,7 @@ V1::Application.routes.draw do
   resources :projects
   resources :startupheaders
   resources :startups
+  resources :contacts
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

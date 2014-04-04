@@ -1,0 +1,35 @@
+<div class="cmsWrapper">
+	<div class="releases">
+		<div class="divHeader">Contacts</div>
+		<div class="tableWrapper">
+			<div class="tableContent">
+				<% if @contacts.count > 0 %>
+					<table width="100%">
+						<tr class="tableHeader">
+							<th>ABOUT 1</th>
+							<th>ABOUT 2</th>
+							<th>THANKS TEXT</th>
+						</tr>
+						<tr><hr class="ruler"/></tr>
+						<% @contacts.each do |c| %>
+							<tr class="tableRow">
+								<td width="20%"><%= c.about1 %></td>
+								<td width="55%"><%= c.about2 %></td>
+								<td width="21%"><%= c.thanks %></td>
+								<td width="2%"><%= link_to image_tag('edit2.png'), edit_contact_path(c), class: "delete" %></td>
+								<td width="2%"><%= link_to image_tag('delete2.png'), p, class: "delete", :confirm => 'Are you sure you want to delete the contact information?', :method => :delete %></td>
+							</tr>
+						<% end %>
+					</table>
+				<% else %>
+					<table width="100%"><tr class="tableRow empty"><td><em>YOU HAVE NO CONTACT INFO YET... ADD SOME BELOW ?!</em></td></tr></table>
+				<% end %>
+			</div>
+		</div>
+	</div>
+	<h6>
+	<input type="hidden" value="videos" class="modal-model-type">
+	<% if @contacts.count < 1 %>
+	<h6><%= link_to 'Add contact info', new_contact_path, :class => "darkButton2" %></h6>
+	<% end %>
+</div>

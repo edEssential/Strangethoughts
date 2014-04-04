@@ -11,6 +11,8 @@ class ApplicationController < ActionController::Base
     @startupheaders = Startupheader.all
     @startupheader = Startupheader.first
     @startups = Startup.all
+    @contacts = Contact.all
+    @contact = Contact.first
   end
   
 end
