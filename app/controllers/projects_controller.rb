@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, except: [:project_show_via_ajax_call]
 
     def new
       @project = Project.new
@@ -20,6 +20,11 @@ class ProjectsController < ApplicationController
       respond_to do |format|
         format.html { redirect_to cms_path }
       end
+    end
+    
+    def project_show_via_ajax_call
+      @project = Project.find(params[:id])
+      render :json => @project
     end
 
     def index

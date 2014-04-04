@@ -10,7 +10,9 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
-//= require jquery.min
+//= require jquery
+//= require jquery_ujs
+//= require jquery.ui.all
 //= require bootstrap.min
 //= require jquery.prettyPhoto
 //= require jquery.nicescroll.min
@@ -19,7 +21,11 @@
 //= require owl.carousel
 //= require animate
 //= require jquery.BlackAndWhite
+//= require plugins
 //= require myscript
+//= require projectshow
+//= require mustache
+//= require_tree ../../templates
 
 //PrettyPhoto
 jQuery(document).ready(function() {
@@ -37,6 +43,7 @@ jQuery(document).ready(function() {
 	});
 	
 });
+
 
 //BlackAndWhite
 $(window).load(function(){
@@ -59,3 +66,4 @@ $(window).load(function(){
 		}
 	});
 });
+

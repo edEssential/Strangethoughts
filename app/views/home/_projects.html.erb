@@ -15,7 +15,8 @@
 				<div class="work_item">
 					<div class="work_img">
 						<%= image_tag p.image.url(:medium) %>
-						<a class="zoom" href="<%= p.image.url(:medium) %>" rel="prettyPhoto[portfolio1]" ></a>
+						<input type="hidden" value=<%= p.id %> class="modal-object-id">
+						<a id="projectShowButton" class="zoom" href="#projectShow"></a>
 					</div>
 					<div class="work_description">
 						<div class="work_descr_cont">
@@ -28,4 +29,7 @@
 			<% end %>
 		</div><!-- //PROJECTS SLIDER -->
 	</div>
+	
+	<%= render 'projectShow' %>
+	
 </section><!-- //PROJECTS -->

@@ -20,31 +20,22 @@
 						<%= link_to 'Edit', edit_user_registration_path %> | <%= link_to 'Logout', destroy_user_session_path, method: :delete %></div>
 					</div>
 				<% end %>
-			
-				<!-- SEARCH FORM -->
-				<!--<div id="search-form" class="pull-right">
-					<form method="get" action="#">
-						<input type="text" name="Search" value="Search" onFocus="if (this.value == 'Search') this.value = '';" onBlur="if (this.value == '') this.value = 'Search';" />
-					</form>
-				</div>--><!-- SEARCH FORM -->
-			
-				<!-- MENU -->
+				
 				<div class="pull-right">
 					<nav class="navmenu center">
 						<ul>
-							<li class="first active scroll_btn"><a href="#home" >Home</a></li>
+							<li class="scroll_btn first active"><a href="#home">Home</a></li>
 							<li class="scroll_btn"><a href="#about">About Us</a></li>
 							<li class="scroll_btn"><a href="#projects">Our Work</a></li>
 							<li class="scroll_btn"><a href="#clients">Clients</a></li>
 							<li class="scroll_btn"><a href="#team">Start-Ups</a></li>
-							<li class="scroll_btn"><%= link_to 'From The Lab', blogs_path %></li>
-							<li class="scroll_btn"><% if user_signed_in? %>
-								<%= link_to "CMS", cms_path %>
+							<li class="scroll_btn last"><%= link_to 'From The Lab', blogs_path %></li>
+							<% if user_signed_in? %>
+								<li class="scroll_btn"><%= link_to "CMS", cms_path %></li>
 							<% end %>
-							</li>
 						</ul>
 					</nav>
-				</div><!-- //MENU -->
+				</div>
 			</div><!-- //MENU BLOCK -->
 		</div><!-- //CONTAINER -->
 	</header><!-- //HEADER -->
