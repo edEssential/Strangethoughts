@@ -15,10 +15,9 @@ jQuery(document).ready(function() {
 			success: function(data) {
 				console.log(data);
 				var project_content = SMT['projectshow'](data);
-				jQuery('.modal-content').empty(function() {
-					jQuery('.modal-content').append(project_content);
-					jQuery('#myModal').appendTo("body").modal('show');
-				});
+				jQuery('.modal-content').empty();
+				jQuery('.modal-content').append(project_content);
+				jQuery('#myModal').appendTo("body").modal('show');
 			}
 		});
 	});
