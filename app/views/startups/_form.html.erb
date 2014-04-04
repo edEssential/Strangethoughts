@@ -1,0 +1,31 @@
+<section id="formBacker">
+	<div class="container">
+		
+		<div id="cmsHeader">
+			<h2 id="cmsTitle">Add/edit your startup's content here</h2>
+		</div>
+		
+		<div class="formWrapper">
+			<% if @startup.errors.any? %>
+				<div class="message warning">
+					<% @startup.errors.full_messages.each do |msg| %>
+			   			<%= msg %><br/>
+					<% end %>
+				</div>
+			<% end %>	
+			<%= form_for(@startup) do |f| %>
+				<%= f.label :Title, class: "formText" %><br/>
+    			<%= f.text_field :title, class: 'text-area' %><br /><br />
+				<%= f.label :Description, class: "formText" %><br/>
+	    		<%= f.text_area :content, class: 'text-areaArea' %><br /><br />
+				<%= f.label :URL, class: "formText" %><br/>
+	    		<%= f.text_field :url, class: 'text-area' %><br /><br />
+				<%= f.label :Image, class: "formText" %><br/>
+				<%= f.label :Must_be_870_x_500_pixels, class: "formText" %>
+    			<%= f.file_field :image, class: 'formImage' %><br /><br />
+	    		<%= f.submit %>
+			<% end %>
+		</div>
+		
+	</div>
+</section>

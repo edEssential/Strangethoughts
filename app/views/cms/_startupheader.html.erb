@@ -1,0 +1,54 @@
+<div class="cmsWrapper">
+	<div class="releases">
+		<div class="divHeader">Startups Content</div>
+		<div class="tableWrapper">
+			<div class="tableContent">
+				<h2 class="tableSubHeader">Header &amp; Strapline</h2>
+				<% if @startupheaders.count > 0 %>
+					<table class="individualTable" width="100%">
+						<tr class="tableHeader">
+							<th>TITLE</th>
+							<th>STRAPLINE</th>
+						</tr>
+						<tr><hr class="ruler"/></tr>
+						<% @startupheaders.each do |sh| %>
+							<tr class="tableRow">
+								<td width="20%"><%= sh.title %></td>
+								<td width="75%"><%= truncate (sh.strapline), length: 100, :separator => '.' %></td>
+								<td width="5%"><%= link_to image_tag('edit2.png'), edit_startupheader_path(sh), class: "edit" %></td>
+							</tr>
+						<% end %>
+					</table>
+				<% else %>
+					<table width="100%"><tr class="tableRow empty"><td><em>YOU HAVE NO TITLE OR STRAPLINE... ADD THEM BELOW ?!</em></td></tr></table>
+				<% end %>
+				<h2 class="tableSubHeader">Startups</h2>
+				<% if @startups.count > 0 %>
+					<table width="100%">
+						<tr class="tableHeader">
+							<th>TITLE</th>
+							<th>CONTENT</th>
+							<th>URL</th>
+						</tr>
+						<tr><hr class="ruler"/></tr>
+						<% @startups.each do |s| %>
+							<% url = truncate (s.url), length: 40, :separator => '.' %>
+							<tr class="tableRow">
+								<td width="20%"><%= s.title %></td>
+								<td width="50%"><%= truncate (s.content), length: 70, :separator => '.' %></td>
+								<td width="25%"><%= link_to url, s.url  %></td>
+								<td width="5%"><%= link_to image_tag('edit2.png'), edit_startup_path(s), class: "edit" %></td>
+							</tr>
+						<% end %>
+					</table>
+				<% else %>
+					<table width="100%"><tr class="tableRow empty"><td><em>YOU HAVE NO STARTUPS YET... ADD SOME BELOW ?!</em></td></tr></table>
+				<% end %>
+			</div>
+		</div>
+	</div>
+	<% if @startupheaders.count < 1 %>
+	<h6><%= link_to 'Add startups title and content', new_startupheader_path, :class => "darkButton2" %></h6>
+	<% end %>
+	<h6><%= link_to 'Add new startup block', new_startup_path, :class => "darkButton2" %></h6>
+</div>

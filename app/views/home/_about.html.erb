@@ -37,7 +37,9 @@
 				</ul><!-- CASTOM TAB -->
 			</div><!-- //CONTAINER -->
 		</div><!-- //CLEAN CODE -->
-		
+	</div>
+	
+	<div class="dark">	
 		<!-- CONTAINER -->
 		<div class="container">
 		
@@ -48,11 +50,11 @@
 					<% begString = abb.title.split(" ").first(1).join(" ") %>
 					<% endString = abb.title.split(" ").last(1).join(" ") %>
 				
-					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-ss-12 margbot30">
-						<a class="services_item" href="javascript:void(0);" >
+					<div class="col-lg-half col-md-3 col-sm-6 col-xs-6 col-ss-12 margbot30">
+						<div class="services_item">
 							<p><b><%= begString %></b> <%= endString %></p>
 							<span><%= abb.content %></span>
-						</a>
+						</div>
 					</div>
 				<% end %>
 			</div><!-- //ROW -->

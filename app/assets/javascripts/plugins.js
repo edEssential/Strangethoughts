@@ -14,11 +14,11 @@ Google Map
 
 		// Map Coordination
 
-		var latlng = new google.maps.LatLng(41.862274,-87.661328);
+		var latlng = new google.maps.LatLng(51.691287, -1.395263);
 
 		// Map Options
 		var myOptions = {
-			zoom: 15,
+			zoom: 8,
 			center: latlng,
 			mapTypeId: google.maps.MapTypeId.ROADMAP,
 			disableDefaultUI: true,
@@ -34,7 +34,7 @@ Google Map
 
 	  	// First Marker Coordination
 		
-		var myLatlng = new google.maps.LatLng(41.856774,-87.679928);
+		var myLatlng = new google.maps.LatLng(51.523267,-0.082129);
 
 		// Your Texts 
 
@@ -43,12 +43,12 @@ Google Map
 		  '</div>'+
 		  '<h4>' +
 
-		  'Office 1'+
+		  'London Office'+
 
 		  '</h4>'+
 		  '<p>' +
 
-		  'Your description is here.' +
+		  '22 Scrutton Street, London, E5 2PP' +
 
 		  '</p>'+
 		  '</div>';
@@ -57,7 +57,7 @@ Google Map
 		var marker = new google.maps.Marker({
 			  position: myLatlng,
 			  map: map,
-			  title: 'Hello World!',
+			  title: 'London',
 			  icon: image
 		  });
 
@@ -80,7 +80,7 @@ Google Map
 
 		 // Second Marker Coordination
 
-		 var myLatlngSecond = new google.maps.LatLng(41.863774,-87.639928);
+		 var myLatlngSecond = new google.maps.LatLng(51.450754,-2.598224);
 
 		 // Your Texts
 
@@ -89,12 +89,12 @@ Google Map
 		  '</div>'+
 		  '<h4>' +
 
-		  'Office 2'+
+		  'Bristol Office'+
 
 		  '</h4>'+
 		  '<p>' +
 
-		  'Your description is here.' +
+		  '33 Waterfront, Bristol, BS2 7PP' +
 
 		  '</p>'+
 		  '</div>';
@@ -106,12 +106,52 @@ Google Map
 		 var markerSecond = new google.maps.Marker({
 			  position: myLatlngSecond,
 			  map: map,
-			  title: 'Hello World!',
+			  title: 'Bristol',
 			  icon: image
 		  });
 
 		 google.maps.event.addListener(markerSecond, 'click', function() {
 			infowindowSecond.open(map,markerSecond);
+		  });
+
+		 /* ========= End Second Marker ========= */
+		
+		/* ========= Third Marker ========= */
+
+		 // Third Marker Coordination
+
+		 var myLatlngThird = new google.maps.LatLng(45.466256,9.18354);
+
+		 // Your Texts
+
+		 var contentStringThird = '<div id="content">'+
+		  '<div id="siteNotice">'+
+		  '</div>'+
+		  '<h4>' +
+
+		  'Milan Office'+
+
+		  '</h4>'+
+		  '<p>' +
+
+		  'Street Address Goes Here' +
+
+		  '</p>'+
+		  '</div>';
+
+		  var infowindowThird = new google.maps.InfoWindow({
+			  content: contentStringThird,
+			  });
+
+		 var markerThird = new google.maps.Marker({
+			  position: myLatlngThird,
+			  map: map,
+			  title: 'Milan',
+			  icon: image
+		  });
+
+		 google.maps.event.addListener(markerThird, 'click', function() {
+			infowindowThird.open(map,markerThird);
 		  });
 
 		 /* ========= End Second Marker ========= */

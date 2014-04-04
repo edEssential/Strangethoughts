@@ -2,7 +2,11 @@
 
 	<!-- CONTAINER -->
 	<div class="container">
-		<h2><b>Start</b> ups</h2>
+		
+		<% begString = @startupheader.title.split(" ").first(2).join(" ") %>
+		<% endString = @startupheader.title.split(" ").last(2).join(" ") %>
+		
+		<h2><b><%= begString%></b> <%= endString %></h2>
 		
 		<!-- TESTIMONIALS -->
 		<div class="testimonials" data-appear-top-offset="-200" data-animated="fadeInUp">
@@ -12,7 +16,7 @@
 				
 				<!-- TESTIMONIAL1 -->
 				<div class="item">
-					<div class="testim_content">Strange Thoughts for start-ups utilises our model and experience in working with global brands to emerging products and services for application to integrations and marketing campaigns.</div>
+					<div class="testim_content"><%= @startupheader.strapline %></div>
 					<!--<div class="testim_author">—  Anna Balashova, <b>Philosopher</b></div>-->
 				</div><!-- TESTIMONIAL1 -->
 
@@ -21,34 +25,22 @@
 		
 		<!-- RECENT POSTS -->
 		<div class="row recent_posts" data-appear-top-offset="-200" data-animated="fadeInUp">
-			<div class="col-lg-6 col-md-6 col-sm-6 padbot30 post_item_block">
-				<div class="post_item">
-					<div class="post_item_img">
-						<img src="assets/blog/dareProj.png" alt="" />
-						<a class="link" href="http://www.daredevilproject.com/"></a>
-					</div>
-					<div class="post_item_content">
-						<a class="title" href="http://www.daredevilproject.com/">DAREDEVIL PROJECT</a>
-						<ul class="post_item_inf">
-							<p>Daredevil Project are the creators of ChallengeOff, a mobile multiplayer game that is played in the real world. Completing a list of 1Word tasks in the most creative and entertaining way, players must upload picture evidence to a panel of Daredevil Judges who will award points to each one; the team with the most points wins.</p>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-6 col-md-6 col-sm-6 padbot30 post_item_block">
-				<div class="post_item">
-					<div class="post_item_img">
-						<img src="assets/blog/colorS.png" alt="" />
-						<a class="link" href="blog-post.html"></a>
-					</div>
-					<div class="post_item_content">
-						<a class="title" href="blog-post.html" >COLOUR STORY</a>
-						<ul class="post_item_inf">
-							<p>Colour Story is a new app that allows you to discover the true colours at the heart of your favourite images….</p>
-						</ul>
+			<% @startups.each do |s| %>
+				<div class="col-lg-6 col-md-6 col-sm-6 padbot30 post_item_block">
+					<div class="post_item">
+						<div class="post_item_img">
+							<img src="<%= s.image.url(:medium) %>" alt="" />
+							<a class="link" href="<%= s.url %>"></a>
+						</div>
+						<div class="post_item_content">
+							<a class="title" href="<%= s.url %>"><%= s.title %></a>
+							<ul class="post_item_inf">
+								<p><%= s.content %></p>
+							</ul>
+						</div>
 					</div>
 				</div>
-			</div>
+			<% end %>
 		</div><!-- RECENT POSTS -->
 	</div><!-- //CONTAINER -->
 </section><!-- //TEAM -->

@@ -1,9 +1,17 @@
 <div class="modal-header">
 	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-    <h4 class="modal-title" id="myModalLabel">{{title}}</h4>
+    <h4 class="modal-title" id="myModalLabel">
+		<input type="hidden" value="{{id}}" class="modal-object-id">
+		<a href="#" data-remote="true" id="prevArrow"><img src="assets/prevArrow.png"/></a>
+			{{title}}.
+		<a href="#" data-remote="true" id="nextArrow"><img src="assets/nextArrow.png"/></a>
+	</h4>
 </div>
-<div class="modal-body">
-	<div id="challenge"><h3>The Challenge</h3><br/>{{challenge}}<br/><br/></div>
-	<div id="solution"><h3>The Solution</h3><br/>{{solution}}<br/><br/></div>
-	<div id="result"><h3>The Result</h3><br/>{{result}}<br/><br/></div>
+<div id="weblink">&#160</div></br>
+<div class="modal-body bodyModal">
+	<div id="challenge"><h3 class="modal-h3">The Challenge</h3>{{challenge}}<br/><br/></div>
+	<div id="solution"><h3 class="modal-h3">The Solution</h3>{{solution}}<br/><br/></div>
+	<div id="result"><h3 class="modal-h3">The Result</h3>{{result}}<br/><br/></div>
 </div>
+<img class="modalImage" src="assets/videoModal.png">
+<div class="videoModal"></div>

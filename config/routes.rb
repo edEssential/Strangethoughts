@@ -5,6 +5,7 @@ V1::Application.routes.draw do
   root :to => 'home#index'
   
   match 'projects/project_show_via_ajax_call' => 'projects#project_show_via_ajax_call'
+  match 'home/testing' => 'home#testing'
   
   resources :blogs
   resources :portfolios
@@ -13,6 +14,8 @@ V1::Application.routes.draw do
   resources :abouttbs
   resources :aboutbbs
   resources :projects
+  resources :startupheaders
+  resources :startups
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

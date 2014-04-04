@@ -4,4 +4,7 @@ class HomeController < ApplicationController
     bring_in_models
   end
   
+  def testing
+    
+  end
 end

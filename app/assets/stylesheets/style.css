@@ -1707,7 +1707,7 @@ input[type="color"]:focus {
 		display: block;
 		height: auto;
 		text-align: center;
-		background: #151515;
+		background: #000;
 		font-size: 20px;
 		position: relative;;
 		z-index: 2;
@@ -1720,6 +1720,7 @@ input[type="color"]:focus {
 	.close-map-button{
 		padding:30px;
 		opacity: 1;
+		color:#e1e1e1;
 	}
 
 	.open-map-button{
@@ -1728,7 +1729,7 @@ input[type="color"]:focus {
 	}
 
 	#map .google-map-big-button:hover{
-		background:#ff994b;
+		background:#40a9e8;
 		color:white;
 	}
 

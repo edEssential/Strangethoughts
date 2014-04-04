@@ -1,1 +1,23 @@
 .post_item_img img {border-radius:3px;moz-border-radius:3px;webkit-border-radius:3px;width:100%;height:100%;}
+
+/* MODAL */
+
+.windowModal {float:left;width:100%;height:860px;overflow:scroll;}
+.bodyModal {width:80%;margin:0 10%;}
+#myModalLabel, #weblink {text-align:center;text-transform:uppercase;font-family:"Roboto";font-weight:600;font-size:14px;letter-spacing:1px;height:50px;padding:10px 0px 0px 0px;}
+#weblink {background-color:#e8e8e8;text-transform:none;width:100%;margin:-15px 0px 0px 0px;font-family:"Open Sans";letter-spacing:0px;height:40px;padding-top:10px;}
+.modalImage {width:80%; margin:25px 10%}
+.modalImage img {max-width:100%;}
+#solution, #challenge, #result {width:30%;float:left;margin-right:5%;font-size:15px;text-align:center;line-height:18px;color:#949494;font-family:"Open Sans";}
+#result {margin-right:0px;}
+.modal-h3 {font-size:24px; letter-spacing:1px;font-weight:300;text-align:center;}
+.videoModal {margin-left:180px;}
+#nextArrow, #prevArrow {width:25px;position:absolute;background-color:#777777;}
+#nextArrow img, #prevArrow img {max-width:100%;}
+#nextArrow {margin:-4px 0px 0px 50px;}
+#prevArrow {margin:-3px 0px 0px -75px;}
+#nextArrow, .#prevArrow {}
+.click {padding:0px 10px!important;}
+.big {font-size:20px;line-height:26px;color:#e7e7e7;width:310px;}
+.medium {font-size:16px;line-height:18px;color:#e7e7e7;}
+.dark {margin-top:-120px;padding:60px 0px;background-color:#e8e8e8;}

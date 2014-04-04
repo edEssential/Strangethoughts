@@ -8,6 +8,9 @@ class ApplicationController < ActionController::Base
     @abouttbsall = Abouttb.all
     @aboutbbs = Aboutbb.all
     @projects = Project.all
+    @startupheaders = Startupheader.all
+    @startupheader = Startupheader.first
+    @startups = Startup.all
   end
   
 end

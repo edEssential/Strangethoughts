@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140321102013) do
+ActiveRecord::Schema.define(:version => 20140404154237) do
 
   create_table "aboutbbs", :force => true do |t|
     t.string   "title"
@@ -39,6 +39,25 @@ ActiveRecord::Schema.define(:version => 20140321102013) do
     t.text     "challenge"
     t.text     "solution"
     t.text     "result"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
+
+  create_table "startupheaders", :force => true do |t|
+    t.string   "title"
+    t.text     "strapline"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "startups", :force => true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.string   "url"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
     t.string   "image_file_name"
