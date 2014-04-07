@@ -1844,6 +1844,7 @@ input[type="color"]:focus {
 
 @media (min-width: 768px) and (max-width: 991px) {
 	.logo a {font-size:22px;}
+	#map {display:none;}
 	
 	
 	#search-form input:focus {width:42px;}
