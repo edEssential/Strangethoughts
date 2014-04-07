@@ -38,8 +38,8 @@ function calculateScroll() {
 	var contentTop      =   [];
 	var contentBottom   =   [];
 	var winTop      =   $(window).scrollTop();
-	var rangeTop    =   200;
-	var rangeBottom =   500;
+	var rangeTop    =   100;
+	var rangeBottom =   300;
 	$('.navmenu').find('.scroll_btn a').each(function(){
 		contentTop.push( $( $(this).attr('href') ).offset().top );
 		contentBottom.push( $( $(this).attr('href') ).offset().top + $( $(this).attr('href') ).height() );
