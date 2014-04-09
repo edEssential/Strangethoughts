@@ -11,8 +11,11 @@
 				<%= f.label :Title, class: "formText" %><br/>
     			<%= f.text_field :title, class: 'text-area' %><br /><br />
 				<%= f.label :Image, class: "formText" %><br/>
-				<%= f.label :Must_be_800_x_600_pixels, class: "formText" %>
+				<%= f.label "(must be 640x390 pixels)", class: "formText2" %>
     			<%= f.file_field :image, class: 'formImage' %><br /><br />
+				<%= f.label :Video_unqiue_identier, class: "formText" %><br/>
+				<%= f.label "(the bit that comes between the '=' and '&' on the Youtube URL)", class: "formText2" %><br/>
+				<%= f.text_field :video_embed, class: 'text-area' %><br/><br/>
 				<%= f.label :Challenge, class: "formText" %><br/>
 	    		<%= f.text_area :challenge, class: 'text-areaArea' %><br /><br />
 				<%= f.label :Solution, class: "formText" %><br/>

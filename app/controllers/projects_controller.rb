@@ -23,8 +23,20 @@ class ProjectsController < ApplicationController
     end
     
     def project_show_via_ajax_call
-      @project = Project.find(params[:id])
-      render :json => @project
+      project = Project.find(params[:id])
+      next_project = project.next
+      next_project_id = next_project.map {|np| np.id}.join("")
+      prev_project = project.prev
+      prev_project_id = prev_project.map {|pp| pp.id}.join("")
+      if project.video_embed
+        video = project.video_embed
+        project_show = { :id => project.id, :title => project.title, :challenge => project.challenge, :solution => project.solution, :result => project.result, :next_project => next_project_id, :prev_project => prev_project_id, :video => video }
+        render :json => project_show
+      else
+        image = project.image.url(:medium)
+        project_show = { :id => project.id, :title => project.title, :challenge => project.challenge, :solution => project.solution, :result => project.result, :next_project => next_project_id, :prev_project => prev_project_id, :image => image }
+        render :json => project_show
+      end
     end
 
     def index

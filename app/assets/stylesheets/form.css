@@ -35,6 +35,12 @@
 	font-family:"Open Sans";
 	text-align:center;
 }
+.formText2 {
+	font-size:12px;
+	text-align:center;
+	width:80%;
+	margin:0px 10% 10px 10%;
+}
 .footer-alt {
 	height:0;
 	margin:0;

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140404155644) do
+ActiveRecord::Schema.define(:version => 20140409082833) do
 
   create_table "aboutbbs", :force => true do |t|
     t.string   "title"
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(:version => 20140404155644) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "video_embed"
   end
 
   create_table "startupheaders", :force => true do |t|

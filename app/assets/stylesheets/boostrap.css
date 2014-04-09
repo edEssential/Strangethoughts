@@ -5124,7 +5124,7 @@ button.close {
   background-clip: padding-box;
   border: 1px solid #999;
   border: 1px solid rgba(0, 0, 0, .2);
-  border-bottom:70px solid white;
+  border-bottom:80px solid white;
   border-radius: 6px;
   outline: none;
   -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
@@ -5685,6 +5685,7 @@ font-weight:800;
 .visible-lg {
   display: none !important;
 }
+
 @media (max-width: 767px) {
   .visible-xs {
     display: block !important;
