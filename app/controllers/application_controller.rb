@@ -3,14 +3,14 @@ class ApplicationController < ActionController::Base
   
   def bring_in_models
     @heros = Hero.order("id ASC")
-    @abouttb1 = Abouttb.first
-    @abouttbs = Abouttb.all[1..-1]
-    @abouttbsall = Abouttb.all
-    @aboutbbs = Aboutbb.all
-    @projects = Project.all
-    @startupheaders = Startupheader.all
+    @abouttbfirst = Abouttb.first
+    @abouttbrest = Abouttb.all[1..-1]
+    @abouttbsall = Abouttb.order("id ASC")
+    @aboutbbs = Aboutbb.order("id ASC")
+    @projects = Project.order("id ASC")
     @startupheader = Startupheader.first
-    @startups = Startup.all
+    @startupheaders = Startupheader.order("id ASC")
+    @startups = Startup.order("id ASC")
     @contacts = Contact.all
     @contact = Contact.first
   end

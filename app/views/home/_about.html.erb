@@ -9,12 +9,12 @@
 				<!-- CASTOM TAB -->
 				<div id="myTabContent" class="tab-content">
 					<div class="tab-pane fade in active clearfix" id="tab1">
-						<% begString = @abouttb1.title.split(" ").first(2).join(" ") %>
-						<% endString = @abouttb1.title.split(" ").last(1).join(" ") %>
+						<% begString = @abouttbfirst.title.split(" ").first(2).join(" ") %>
+						<% endString = @abouttbfirst.title.split(" ").last(1).join(" ") %>
 						<p class="title"><b><%= begString %></b> <%= endString %></p>
-						<span><%= @abouttb1.content %></span>
+						<span><%= @abouttbfirst.content %></span>
 					</div>
-					<% @abouttbs.each do |atb| %>
+					<% @abouttbrest.each do |atb| %>
 					
 						<% originalString = atb.title %>
 						<% stringCount = originalString.split(" ").count %>
@@ -30,8 +30,8 @@
 					<% end %>
 				</div>
 				<ul id="myTab" class="nav nav-tabs">
-					<li class="active"><a class="i1" href="#tab1" data-toggle="tab" ><i></i><span><%= @abouttb1.title %></span></a></li>
-					<% @abouttbs.each do |atb| %>
+					<li class="active"><a class="i1" href="#tab1" data-toggle="tab" ><i></i><span><%= @abouttbfirst.title %></span></a></li>
+					<% @abouttbrest.each do |atb| %>
 						<li><a class="i<%= atb.id %>" href="#tab<%= atb.id %>" data-toggle="tab" ><i></i><span><%= atb.title %></span></a></li>
 					<% end %>
 				</ul><!-- CASTOM TAB -->
