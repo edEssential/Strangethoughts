@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   
   def bring_in_models
     @heros = Hero.order("id ASC")
-    @abouttbfirst = Abouttb.first
+    @abouttbfirst = Abouttb.find(1)
     @abouttbrest = Abouttb.all[1..-1]
     @abouttbsall = Abouttb.order("id ASC")
     @aboutbbs = Aboutbb.order("id ASC")
