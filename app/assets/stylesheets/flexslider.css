@@ -300,7 +300,19 @@ html[xmlns] .slides {display: block;}
 }
 
 
-
+.title1, .title2, .title3, .title4, .slide1, .slide2, .slide3 {
+	font-size:100.01%;
+	-webkit-animation-duration: 0.1s;
+    -webkit-animation-name: fontfix;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 0.1s;
+	font-family:'Roboto', sans-serif;
+}
+@-webkit-keyframes fontfix{
+    from{   opacity: 1; }
+    to{ opacity: 1; }
+}
 
 
 /* Caption */
@@ -329,9 +341,7 @@ html[xmlns] .slides {display: block;}
 .top_slider .slide1 .flex_caption1 .title2 {margin-bottom:15px; display:inline-block; font-weight:100; line-height:80px; font-size:80px;}
 .top_slider .slide1 .flex_caption1 .title4 {margin-bottom:15px; width:680px; font-weight:300; line-height:34px; font-size:26px;}
 
-.title4 {background-color:rgba(0,0,0,0);}
-
-
+.title4 {background-color:rgba(0,0,0,0);font-weight:200!important;}
 
 .top_slider .slide2 {
 	height:100%;
