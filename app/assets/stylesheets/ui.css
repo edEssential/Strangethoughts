@@ -13,7 +13,7 @@
 #result {margin-right:0px;}
 .modal-h3 {font-size:24px; letter-spacing:1px;font-weight:300;text-align:center;}
 .videoModal {margin-left:180px;}
-#nextArrow, #prevArrow {width:25px;position:absolute;background-color:#777777;}
+#nextArrow, #prevArrow {width:15px;position:absolute;}
 #nextArrow img, #prevArrow img {max-width:100%;}
 #nextArrow {margin:-4px 0px 0px 50px;}
 #prevArrow {margin:-3px 0px 0px -75px;}
