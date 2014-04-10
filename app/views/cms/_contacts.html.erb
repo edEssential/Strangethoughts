@@ -1,4 +1,4 @@
-<div class="cmsWrapper">
+<div class="cmsWrapper" style="margin-bottom:100px;">
 	<div class="releases">
 		<div class="divHeader">Contacts</div>
 		<div class="tableWrapper">
@@ -17,7 +17,7 @@
 								<td width="50%"><%= truncate (c.about2), length: 75, :separator => '.' %></td>
 								<td width="21%"><%= truncate (c.thanks), length: 28, :separator => '.' %></td>
 								<td width="2%"><%= link_to image_tag('edit2.png'), edit_contact_path(c), class: "delete" %></td>
-								<td width="2%"><%= link_to image_tag('delete2.png'), p, class: "delete", :confirm => 'Are you sure you want to delete the contact information?', :method => :delete %></td>
+								<td width="2%"><%= link_to image_tag('delete2.png'), c, class: "delete", :confirm => 'Are you sure you want to delete the contact information?', :method => :delete %></td>
 							</tr>
 						<% end %>
 					</table>

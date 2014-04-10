@@ -13,6 +13,7 @@ class ApplicationController < ActionController::Base
     @startups = Startup.order("id ASC")
     @contacts = Contact.all
     @contact = Contact.first
+    @clients = Client.order("id ASC")
   end
   
 end

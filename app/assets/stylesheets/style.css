@@ -803,14 +803,15 @@ ul.project_info li span {color:#979797;}
 
 
 /* __________ Our Clients __________ */
-.our_clients {padding:71px 0 78px;}
-
+.our_clients {padding:71px 0px 78px;}
 .our_clients .client_img {
 	opacity:0.5;
 	transition: all 0.3s ease-in-out; 
 	-webkit-transition: all 0.3s ease-in-out;
 }
 .our_clients .client_img:hover {opacity:1;}
+
+.client_img {margin:25px 0px 25px 0px;}
 
 
 

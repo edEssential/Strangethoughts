@@ -6,24 +6,11 @@
 		
 			<!-- ROW -->
 			<div class="row">
-				<div class="col-lg-2 col-md-2 col-sm-2 client_img">
-					<img src="assets/clients/reebok.jpg" alt="" />
-				</div>
-				<div class="col-lg-2 col-md-2 col-sm-2 client_img">
-					<img src="assets/clients/samsung.jpg" alt="" />
-				</div>
-				<div class="col-lg-2 col-md-2 col-sm-2 client_img">
-					<img src="assets/clients/o2.jpg" alt="" />
-				</div>
-				<div class="col-lg-2 col-md-2 col-sm-2 client_img">
-					<img src="assets/clients/heineken.jpg" alt="" />
-				</div>
-				<div class="col-lg-2 col-md-2 col-sm-2 client_img">
-					<img src="assets/clients/skype.jpg" alt="" />
-				</div>
-				<div class="col-lg-2 col-md-2 col-sm-2 client_img">
-					<img src="assets/clients/pokerstars.jpg" alt="" />
-				</div>
+				<% @clients.each do |c| %>
+					<div class="col-lg-2 col-md-2 col-sm-2 client_img">
+						<%= image_tag(c.image.url(:medium)) %>
+					</div>
+				<% end %>
 			</div><!-- //ROW -->
 		</div><!-- CONTAINER -->
 	</div><!-- //OUR CLIENTS -->

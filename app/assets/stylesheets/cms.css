@@ -72,6 +72,7 @@ a:hover {
 	border: 1px solid #fff!important;
 	background:#202326; 
 	font-family:"Open Sans", "futura", sans-serif;
+	color:#ffffff;
 }
 .darkButton3 {display:inline;color:#ffffff;width:25%;margin:0 37.5%;}
 .darkButton3:hover, .darkButton2:hover { background: rgba(100, 109, 118, .8); filter: alpha(opacity=80); }

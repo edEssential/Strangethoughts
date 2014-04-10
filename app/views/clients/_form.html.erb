@@ -1,0 +1,21 @@
+<section id="formBacker">
+	<div class="container">
+		
+		<div id="cmsHeader">
+			<h2 id="cmsTitle">Add/edit your project's content here</h2>
+		</div>
+		
+		<div class="formWrapper">
+			<%= render 'shared/error_messages', :target => @client %>	
+			<%= form_for(@client) do |f| %>
+				<%= f.label :Name, class: "formText" %><br/>
+    			<%= f.text_field :name, class: 'text-area' %><br /><br />
+				<%= f.label :Image, class: "formText" %><br/>
+				<%= f.label "(must be 170x100 pixels)", class: "formText2" %>
+    			<%= f.file_field :image, class: 'formImage' %><br /><br />
+	    		<%= f.submit "Save Project", :class => "button3" %>
+			<% end %>
+		</div>
+		
+	</div>
+</section>
