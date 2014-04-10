@@ -13,7 +13,7 @@
 						<% @heros.each do |h| %>
 							<tr class="tableRow">
 								<td width="15%"><%= h.slide_title %></td>
-								<td width="80%"><%= h.slide_content %></td>
+								<td width="80%"><%= truncate (h.slide_content), length: 110, :separator => '.' %></td>
 								<td width="5%"><%= link_to image_tag('edit2.png'), edit_hero_path(h), class: "edit" %></td>
 							</tr>
 						<% end %>
