@@ -8,7 +8,7 @@
 			<div class="container" data-appear-top-offset="-200" data-animated="fadeInUp">
 				<!-- CASTOM TAB -->
 				<div id="myTabContent" class="tab-content">
-					<div class="tab-pane fade in active clearfix" id="tab1">
+					<div class="tab-pane fade in active clearfix" id="tab<%= @abouttbfirst.id %>">
 						<% begString = @abouttbfirst.title.split(" ").first(2).join(" ") %>
 						<% endString = @abouttbfirst.title.split(" ").last(1).join(" ") %>
 						<p class="title"><b><%= begString %></b> <%= endString %></p>
@@ -30,7 +30,9 @@
 					<% end %>
 				</div>
 				<ul id="myTab" class="nav nav-tabs">
-					<li class="active"><a class="i1" href="#tab1" data-toggle="tab" ><i></i><span><%= @abouttbfirst.title %></span></a></li>
+					<li class="active"><a class="i<%= @abouttbfirst.id %>" href="#tab<%= @abouttbfirst.id %>" data-toggle="tab" ><i></i>
+						<span><%= @abouttbfirst.title %></span></a>
+					</li>
 					<% @abouttbrest.each do |atb| %>
 						<li><a class="i<%= atb.id %>" href="#tab<%= atb.id %>" data-toggle="tab" ><i></i><span><%= atb.title %></span></a></li>
 					<% end %>

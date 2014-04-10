@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   def bring_in_models
     @heros = Hero.order("id ASC")
     @abouttbfirst = Abouttb.find(1)
-    @abouttbrest = Abouttb.all[1..-1]
+    @abouttbrest = Abouttb.where('id >?', 1)
     @abouttbsall = Abouttb.order("id ASC")
     @aboutbbs = Aboutbb.order("id ASC")
     @projects = Project.order("id ASC")
