@@ -745,7 +745,7 @@ header {
 }
 .work_item a.zoom:hover {background-image:url(../assets/zoom_h.png);}
 .work_descr_cont {height:100%;padding-top:25%;}
-.moreProjects {margin-left:82%;}
+.moreProjects {float:right;margin:-30px 55px 20px 0px;}
 
 
 
