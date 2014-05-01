@@ -28,12 +28,13 @@
 			<% @startups.each do |s| %>
 				<div class="col-lg-6 col-md-6 col-sm-6 padbot30 post_item_block">
 					<div class="post_item">
+						<a class="link" href="<%= s.url %>" target="_blank">
 						<div class="post_item_img">
 							<img src="<%= s.image.url(:medium) %>" alt="" />
-							<a class="link" href="<%= s.url %>"></a>
 						</div>
+						</a>
 						<div class="post_item_content">
-							<a class="title" href="<%= s.url %>"><%= s.title %></a>
+							<a class="title" href="<%= s.url %>" target="_blank"><%= s.title %></a>
 							<ul class="post_item_inf">
 								<p><%= s.content %></p>
 							</ul>

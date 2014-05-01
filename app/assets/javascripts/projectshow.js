@@ -1,6 +1,6 @@
 jQuery(document).ready(function() {
 	
-	jQuery(".zoom").click(function() {
+	jQuery(".zoom2").click(function() {
 		var id = jQuery(this).prev('.modal-object-id').val();
 		loadMustacheTemplate(id);
 	});

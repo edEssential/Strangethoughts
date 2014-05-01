@@ -308,6 +308,7 @@ html[xmlns] .slides {display: block;}
     -webkit-animation-timing-function: linear;
     -webkit-animation-delay: 0.1s;
 	font-family:'Roboto', sans-serif;
+	text-align:justify!important;
 }
 @-webkit-keyframes fontfix{
     from{   opacity: 1; }

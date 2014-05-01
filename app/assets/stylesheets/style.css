@@ -22,6 +22,7 @@ body {
 	font-weight:300;
 	font-size: 13px;
 	line-height: 20px;
+	text-align:justify;
 	color: #666;
 	background-color:#fff;
 	-webkit-animation-duration: 0.1s;
@@ -41,7 +42,7 @@ body {
 
 section {background-color:#fff;}
 
-.container {padding-left:0; padding-right:0;}
+.container {padding-left:0; padding-right:0;text-align:justify;}
 
 .parallax {
 	background-position:0 0;
@@ -676,7 +677,7 @@ header {
 
 .work_item .work_description {
 	position:absolute;
-	z-index:20;
+	z-index:0;
 	left:0;
 	top:0;
 	width:100%;
@@ -687,6 +688,7 @@ header {
 	transition: all 0.3s ease-in-out; 
 	-webkit-transition: all 0.3s ease-in-out;
 }
+
 .work_item:hover .work_description {opacity:1;}
 .work_item .work_description .work_descr_cont {
 	position:absolute;
@@ -742,6 +744,8 @@ header {
 	opacity:1;
 }
 .work_item a.zoom:hover {background-image:url(../assets/zoom_h.png);}
+.work_descr_cont {height:100%;padding-top:25%;}
+.moreProjects {margin-left:82%;}
 
 
 
