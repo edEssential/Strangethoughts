@@ -3,7 +3,7 @@
 	<div class="container">
 	
 		<!-- ROW -->
-		<div class="row" data-appear-top-offset="-200" data-animated="fadeInUp">
+		<div class="row padder" data-appear-top-offset="-200" data-animated="fadeInUp">
 		
 			<div class="col-lg-4 col-md-4 col-sm-6 padbot30">
 				<h4><b>About</b> us</h4>
@@ -37,15 +37,9 @@
 			
 				<!-- CONTACT FORM -->
 				<div class="span9 contact_form">
-					<div id="note"></div>
-					<div id="fields">
-						<form id="contact-form-face" class="clearfix" action="#">
-							<input class="half floatLeft"type="text" name="name" id="contact-name" value="Name" onFocus="if (this.value == 'Name') this.value = '';" onBlur="if (this.value == '') this.value = 'Name';" />
-							<input class="half floatRight" type="text" name="email" id="contact-email"  value="Email" onFocus="if (this.value == 'Email') this.value = '';" onBlur="if (this.value == '') this.value = 'Email';" />
-							<textarea name="message" id="contact-message"  onFocus="if (this.value == 'Message') this.value = '';" onBlur="if (this.value == '') this.value = 'Message';">Message</textarea>
-							<input class="contact_btn" type="submit" value="Send message" />
-						</form>
-					</div>
+					<%= link_to image_tag('mail@2x.png', alt: "telephone", width: "20", height: "20", style: "margin:-1px 14px 14px 0px;"), 'mailto:thinking@strangethoughts.co.uk' %><a class="big2" href="mailto:thinking@strangethoughts.co.uk">thinking (at) strangethoughts (dot) co (dot) uk</a>
+					<br/><%= image_tag('telephone@2x.png', alt: "telephone", width: "20", height: "20", style: "margin:-1px 14px 14px 0px;")%>
+					<span class="big2">+ 44 7595 307125</span>
 				</div><!-- //CONTACT FORM -->
 			</div>
 		</div><!-- //ROW -->
