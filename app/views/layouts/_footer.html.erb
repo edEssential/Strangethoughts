@@ -40,8 +40,9 @@
 					<div id="note"></div>
 					<div id="fields">
 						<form id="contact-form-face" class="clearfix" action="#">
-							<input type="text" name="name" value="Name" onFocus="if (this.value == 'Name') this.value = '';" onBlur="if (this.value == '') this.value = 'Name';" />
-							<textarea name="message" onFocus="if (this.value == 'Message') this.value = '';" onBlur="if (this.value == '') this.value = 'Message';">Message</textarea>
+							<input class="half floatLeft"type="text" name="name" id="contact-name" value="Name" onFocus="if (this.value == 'Name') this.value = '';" onBlur="if (this.value == '') this.value = 'Name';" />
+							<input class="half floatRight" type="text" name="email" id="contact-email"  value="Email" onFocus="if (this.value == 'Email') this.value = '';" onBlur="if (this.value == '') this.value = 'Email';" />
+							<textarea name="message" id="contact-message"  onFocus="if (this.value == 'Message') this.value = '';" onBlur="if (this.value == '') this.value = 'Message';">Message</textarea>
 							<input class="contact_btn" type="submit" value="Send message" />
 						</form>
 					</div>

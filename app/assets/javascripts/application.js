@@ -25,6 +25,7 @@
 //= require myscript
 //= require projectshow
 //= require mustache
+//= require form_validation
 //= require_tree ../../templates
 
 //PrettyPhoto
@@ -66,4 +67,3 @@ $(window).load(function(){
 		}
 	});
 });
-

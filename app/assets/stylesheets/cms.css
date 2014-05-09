@@ -96,3 +96,6 @@ h3.modalFormUpdated {font-family:"helvetica", helvetica, sans-serif;font-size:18
 }
 .edit img {max-width:25%;margin:3px 0px 0px 25px;}
 .delete img {max-width:75%;margin:3px 0px 0px 0px;}
+.half {width:48%!important;}
+.floatLeft {float:left;}
+.floatRight {float:right;}
