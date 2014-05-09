@@ -8,6 +8,7 @@ gem "auto_html"
 gem 'devise'
 gem 'smt_rails', git: 'git://github.com/railsware/smt_rails.git'
 gem 'omniauth'
+gem 'newrelic_rpm'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
