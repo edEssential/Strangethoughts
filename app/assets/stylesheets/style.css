@@ -747,6 +747,9 @@ header {
 .work_descr_cont {height:100%;padding-top:25%;}
 .moreProjects {float:right;margin:-30px 55px 20px 0px;}
 
+.bevan {font-size:24px; font-family: 'Bevan', cursive;margin:10px auto 10px auto;width:400px;text-align:center;}
+.bevanVid {width:500px;margin:10px auto;}
+
 
 
 /* __________ WORKS DETAILS __________ */

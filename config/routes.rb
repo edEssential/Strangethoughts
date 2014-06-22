@@ -6,6 +6,7 @@ V1::Application.routes.draw do
   
   match 'projects/project_show_via_ajax_call' => 'projects#project_show_via_ajax_call'
   match 'home/testing' => 'home#testing'
+  match 'private' => 'home#private'
   
   resources :blogs
   resources :portfolios
