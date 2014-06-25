@@ -48,7 +48,7 @@ Google Map
 		  '</h4>'+
 		  '<p>' +
 
-		  '22 Scrutton Street, London, E5 2PP' +
+		  '32-38 Scrutton Street, London, E5 2PP' +
 
 		  '</p>'+
 		  '</div>';
