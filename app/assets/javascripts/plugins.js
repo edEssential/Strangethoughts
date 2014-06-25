@@ -94,7 +94,7 @@ Google Map
 		  '</h4>'+
 		  '<p>' +
 
-		  'Pervasive Media Studio Leadworks, Anchor Square, Harbourside, Bristol, Avon BS1 5DB' +
+		  'Pervasive Media Studio, Leadworks, Anchor Square,' + '<br/>' + 'Harbourside, Bristol, Avon BS1 5DB' +
 
 		  '</p>'+
 		  '</div>';
