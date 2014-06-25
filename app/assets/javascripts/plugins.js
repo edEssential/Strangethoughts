@@ -94,7 +94,7 @@ Google Map
 		  '</h4>'+
 		  '<p>' +
 
-		  '33 Waterfront, Bristol, BS2 7PP' +
+		  'Pervasive Media Studio Leadworks, Anchor Square, Harbourside, Bristol, Avon BS1 5DB' +
 
 		  '</p>'+
 		  '</div>';
