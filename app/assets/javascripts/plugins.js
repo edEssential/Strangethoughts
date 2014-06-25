@@ -48,7 +48,10 @@ Google Map
 		  '</h4>'+
 		  '<p>' +
 
-		  '32-38 Scrutton Street, London, ' + '<a href="https://www.google.co.uk/maps/place/London+EC2A+4RQ/@51.522303,-0.0815959,17z/data=!4m2!3m1!1s0x48761cb1d367fa85:0x69f752d4386c2408" target="_blank"' + 'EC2A 4RQ' + '</a>' +
+		  '32-38 Scrutton Street, London, ' + 
+		  '<a href="https://www.google.co.uk/maps/place/London+EC2A+4RQ/@51.522303,-0.0815959,17z/data=!4m2!3m1!1s0x48761cb1d367fa85:0x69f752d4386c2408" target="_blank">' + 
+		        'EC2A 4RQ' + 
+		  '</a>' +
 
 		  '</p>'+
 		  '</div>';
@@ -94,7 +97,11 @@ Google Map
 		  '</h4>'+
 		  '<p>' +
 
-		  'Pervasive Media Studio, Leadworks, Anchor Square,' + '<br/>' + 'Harbourside, Bristol, Avon' + '<a href="https://www.google.co.uk/maps/place/Bristol/@51.450439,-2.6005433,17z/data=!3m1!4b1!4m2!3m1!1s0x48718dd69286982f:0x18ec06f7eff4ac4c" target="_blank"' + ' BS1 5DB' + '</a>'+
+		  'Pervasive Media Studio, Leadworks, Anchor Square,' + 
+		  '<br/>' + 'Harbourside, Bristol, Avon' + 
+		  '<a href="https://www.google.co.uk/maps/place/Bristol/@51.450439,-2.6005433,17z/data=!3m1!4b1!4m2!3m1!1s0x48718dd69286982f:0x18ec06f7eff4ac4c" target="_blank">' + 
+		        ' BS1 5DB' + 
+		  '</a>'+
 
 		  '</p>'+
 		  '</div>';
