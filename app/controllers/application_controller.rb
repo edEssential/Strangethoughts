@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
     @abouttbrest = Abouttb.where('id >?', 1)
     @abouttbsall = Abouttb.order("id ASC")
     @aboutbbs = Aboutbb.order("id ASC")
-    @projects = Project.order("id ASC")
+    @projects = Project.order("id DESC")
     @startupheader = Startupheader.first
     @startupheaders = Startupheader.order("id ASC")
     @startups = Startup.order("id ASC")
