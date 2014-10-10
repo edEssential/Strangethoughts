@@ -24,9 +24,9 @@ class ProjectsController < ApplicationController
     
     def project_show_via_ajax_call
       project = Project.find(params[:id])
-      next_project = project.next
+      next_project = project.prev
       next_project_id = next_project.map {|np| np.id}.join("")
-      prev_project = project.prev
+      prev_project = project.next
       prev_project_id = prev_project.map {|pp| pp.id}.join("")
       
       vs = project.video_embed.to_s
