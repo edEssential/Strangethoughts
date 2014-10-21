@@ -48,9 +48,9 @@ Google Map
 		  '</h4>'+
 		  '<p>' +
 
-		  '32-38 Scrutton Street, London, ' + 
-		  '<a href="https://www.google.co.uk/maps/place/London+EC2A+4RQ/@51.522303,-0.0815959,17z/data=!4m2!3m1!1s0x48761cb1d367fa85:0x69f752d4386c2408" target="_blank">' + 
-		        'EC2A 4RQ' + 
+		  'Floor 9, 207 Old Street, London, ' + 
+		  '<a href="https://www.google.co.uk/maps/place/London+EC1V+9NR/@51.5259091,-0.0890998,17z/data=!3m1!4b1!4m2!3m1!1s0x48761ca61bf76b2d:0x524bb1ae87636501" target="_blank">' + 
+		        'EC1V 9NR' + 
 		  '</a>' +
 
 		  '</p>'+
