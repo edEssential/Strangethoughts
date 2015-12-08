@@ -48,9 +48,9 @@ Google Map
 		  '</h4>'+
 		  '<p>' +
 
-		  'Floor 9, 207 Old Street, London, ' + 
-		  '<a href="https://www.google.co.uk/maps/place/London+EC1V+9NR/@51.5259091,-0.0890998,17z/data=!3m1!4b1!4m2!3m1!1s0x48761ca61bf76b2d:0x524bb1ae87636501" target="_blank">' + 
-		        'EC1V 9NR' + 
+		  'Lower Ground, 10 Finsbury Square, London, ' + 
+		  '<a href="https://www.google.co.uk/maps/place/10+Finsbury+Square,+London+EC2A/@51.5212413,-0.0896937,17z/data=!3m1!4b1!4m2!3m1!1s0x48761caeb1aad1db:0xd136380926d8c84" target="_blank">' + 
+		        'EC2A 1AF' + 
 		  '</a>' +
 
 		  '</p>'+
@@ -97,10 +97,9 @@ Google Map
 		  '</h4>'+
 		  '<p>' +
 
-		  'Pervasive Media Studio, Leadworks, Anchor Square,' + 
-		  '<br/>' + 'Harbourside, Bristol, Avon' + 
-		  '<a href="https://www.google.co.uk/maps/place/Bristol/@51.450439,-2.6005433,17z/data=!3m1!4b1!4m2!3m1!1s0x48718dd69286982f:0x18ec06f7eff4ac4c" target="_blank">' + 
-		        ' BS1 5DB' + 
+		  "Watershed, 1 Canon's Road Bristol, Avon" + 
+		  '<a href="https://www.google.co.uk/maps/place/Watershed/@51.4513248,-2.6004037,17z/data=!3m1!4b1!4m2!3m1!1s0x48718dd658d5706f:0x78607ce02ba4510" target="_blank">' + 
+		        ' BS1 5TX' + 
 		  '</a>'+
 
 		  '</p>'+
