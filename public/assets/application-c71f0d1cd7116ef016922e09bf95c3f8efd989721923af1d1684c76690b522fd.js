@@ -13685,7 +13685,7 @@ Google Map
 		var map = new google.maps.Map(document.getElementById('google-map'), myOptions);
 
 		// Marker Image
-		var image = 'assets/marker.png';
+		var image = "/assets/marker-d8c117d7440c500552ea6f9603363ad03637fb2c23e500a6ad84e795aeafce1b.png";
 		
 	  	/* ========= First Marker ========= */
 
