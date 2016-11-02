@@ -51,7 +51,7 @@ class HerosController < ApplicationController
     private
     
     def hero_params
-      params.require(:hero).permit(:slide_title, :slide_content, :image)
+      params.require(:hero).permit(:slide_title, :slide_content)
     end
     
 end
