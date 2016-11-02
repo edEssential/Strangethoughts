@@ -6,7 +6,7 @@ class AboutbbsController < ApplicationController
     end
 
     def create
-      @aboutbb = Aboutbb.create(params[:aboutbb])
+      @aboutbb = Aboutbb.create(aboutbb_params)
       respond_to do |format|
         format.html { redirect_to cms_path }
       end
@@ -31,7 +31,7 @@ class AboutbbsController < ApplicationController
 
     def update   
       @aboutbb = Aboutbb.find(params[:id])
-      if @aboutbb.update_attributes(params[:aboutbb])
+      if @aboutbb.update_attributes(aboutbb_params)
         respond_to do |format|
          format.html { redirect_to cms_path }
         end
@@ -46,6 +46,10 @@ class AboutbbsController < ApplicationController
       respond_to do |format|
         format.html { redirect_to cms_path }
       end
+    end
+
+    def aboutbb_params
+      params.require(:work).permit(:title, :content)
     end
   
 end
