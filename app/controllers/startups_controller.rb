@@ -6,7 +6,7 @@ class StartupsController < ApplicationController
   end
 
   def create
-    @startup = Startup.create(params[:startup])
+    @startup = Startup.create(startup_params)
     respond_to do |format|
       format.html { redirect_to cms_path }
     end
@@ -31,7 +31,7 @@ class StartupsController < ApplicationController
 
   def update   
     @startup = Startup.find(params[:id])
-    if @startup.update_attributes(params[:startup])
+    if @startup.update_attributes(startup_params)
       respond_to do |format|
        format.html { redirect_to cms_path }
       end
@@ -46,6 +46,12 @@ class StartupsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to cms_path }
     end
+  end
+  
+  private
+  
+  def startup_params
+    params.require(:hero).permit(:title, :content, :url, :image)
   end
   
 end

@@ -6,7 +6,7 @@ class HerosController < ApplicationController
     end
 
     def create
-      @hero = Hero.create(params[:hero])
+      @hero = Hero.create(hero_params)
       respond_to do |format|
         format.html { redirect_to cms_path }
       end
@@ -31,7 +31,7 @@ class HerosController < ApplicationController
 
     def update   
       @hero = Hero.find(params[:id])
-      if @hero.update_attributes(params[:hero])
+      if @hero.update_attributes(hero_params)
         respond_to do |format|
          format.html { redirect_to cms_path }
         end
@@ -46,6 +46,12 @@ class HerosController < ApplicationController
       respond_to do |format|
         format.html { redirect_to cms_path }
       end
+    end
+    
+    private
+    
+    def hero_params
+      params.require(:hero).permit(:slide_title, :slide_content, :image)
     end
     
 end

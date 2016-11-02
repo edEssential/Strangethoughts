@@ -6,7 +6,7 @@ class ClientsController < ApplicationController
    end
 
    def create
-     @client = Client.create(params[:client])
+     @client = Client.create(client_params)
      respond_to do |format|
        format.html { redirect_to cms_path }
      end
@@ -31,7 +31,7 @@ class ClientsController < ApplicationController
 
    def update   
      @client = Client.find(params[:id])
-     if @client.update_attributes(params[:client])
+     if @client.update_attributes(client_params)
        respond_to do |format|
         format.html { redirect_to cms_path }
        end
@@ -46,6 +46,12 @@ class ClientsController < ApplicationController
      respond_to do |format|
        format.html { redirect_to cms_path }
      end
+   end
+   
+   private
+   
+   def client_params
+     params.require(:client).permit(:image, :name)
    end
    
 end

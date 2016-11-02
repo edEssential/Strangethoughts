@@ -6,7 +6,7 @@ class ProjectsController < ApplicationController
     end
 
     def create
-      @project = Project.create(params[:project])
+      @project = Project.create(project_params)
       respond_to do |format|
         if @project.save
           format.html { redirect_to cms_path, :notice => "Project was successfully created" }
@@ -55,7 +55,7 @@ class ProjectsController < ApplicationController
 
     def update   
       @project = Project.find(params[:id])
-      if @project.update_attributes(params[:project])
+      if @project.update_attributes(project_params)
         respond_to do |format|
          format.html { redirect_to cms_path }
         end
@@ -70,6 +70,12 @@ class ProjectsController < ApplicationController
       respond_to do |format|
         format.html { redirect_to cms_path }
       end
+    end
+    
+    private
+    
+    def project_params
+      params.require(:project).permit(:title, :challenge, :solution, :result, :image, :video_embed)
     end
   
 end

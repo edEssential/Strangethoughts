@@ -47,9 +47,11 @@ class AboutbbsController < ApplicationController
         format.html { redirect_to cms_path }
       end
     end
-
+    
+    private
+    
     def aboutbb_params
-      params.require(:work).permit(:title, :content)
+      params.require(:aboutbb).permit(:title, :content)
     end
   
 end
