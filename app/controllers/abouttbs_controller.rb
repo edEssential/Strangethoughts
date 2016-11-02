@@ -6,7 +6,7 @@ class AbouttbsController < ApplicationController
     end
 
     def create
-      @abouttb = Abouttb.create(params[:abouttb])
+      @abouttb = Abouttb.create(abouttb_params)
       respond_to do |format|
         format.html { redirect_to cms_path }
       end
@@ -31,7 +31,7 @@ class AbouttbsController < ApplicationController
 
     def update   
       @abouttb = Abouttb.find(params[:id])
-      if @abouttb.update_attributes(params[:abouttb])
+      if @abouttb.update_attributes(abouttb_params)
         respond_to do |format|
          format.html { redirect_to cms_path }
         end
@@ -46,6 +46,12 @@ class AbouttbsController < ApplicationController
       respond_to do |format|
         format.html { redirect_to cms_path }
       end
+    end
+    
+    private
+    
+    def abouttb_params
+      params.require(:abouttb).permit(:title, :content)
     end
   
 end

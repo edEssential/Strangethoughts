@@ -4,9 +4,10 @@ V1::Application.routes.draw do
 
   root :to => 'home#index'
   
-  match 'projects/project_show_via_ajax_call' => 'projects#project_show_via_ajax_call'
-  match 'home/testing' => 'home#testing'
-  match 'private' => 'home#private'
+  match 'projects/project_show_via_ajax_call' => 'projects#project_show_via_ajax_call', :via => [:get], :as => 'project_show_via_ajax_call'
+  match 'home/testing' => 'home#testing', :via => [:get], :as => 'testing'
+  match 'private' => 'home#private', :via => [:get], :as => 'private'
+  
   
   resources :blogs
   resources :portfolios

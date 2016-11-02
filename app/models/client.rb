@@ -1,5 +1,4 @@
 class Client < ActiveRecord::Base
-  attr_accessible :image, :name
   
   has_attached_file :image, styles: {
       thumb: '100x100>',

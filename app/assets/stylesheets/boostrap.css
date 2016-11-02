@@ -5652,6 +5652,7 @@ font-weight:800;
   float: right !important;
 }
 .pull-left {
+	margin-top:10px!important;
   float: left !important;
 }
 .hide {

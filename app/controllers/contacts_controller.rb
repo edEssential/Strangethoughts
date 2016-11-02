@@ -6,7 +6,7 @@ class ContactsController < ApplicationController
   end
 
   def create
-    @contact = Contact.create(params[:contact])
+    @contact = Contact.create(contact_params)
     respond_to do |format|
       format.html { redirect_to cms_path }
     end
@@ -31,7 +31,7 @@ class ContactsController < ApplicationController
 
   def update   
     @contact = Contact.find(params[:id])
-    if @contact.update_attributes(params[:contact])
+    if @contact.update_attributes(contact_params)
       respond_to do |format|
        format.html { redirect_to cms_path }
       end
@@ -46,6 +46,12 @@ class ContactsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to cms_path }
     end
+  end
+  
+  private
+  
+  def contact_params
+    params.require(:contact).permit(:about1, :about2, :thanks)
   end
 
 end

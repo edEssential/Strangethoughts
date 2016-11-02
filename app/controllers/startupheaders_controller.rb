@@ -6,7 +6,7 @@ class StartupheadersController < ApplicationController
   end
 
   def create
-    @startupheader = Startupheader.create(params[:startupheader])
+    @startupheader = Startupheader.create(startupheader_params)
     respond_to do |format|
       format.html { redirect_to cms_path }
     end
@@ -31,7 +31,7 @@ class StartupheadersController < ApplicationController
 
   def update   
     @startupheader = Startupheader.find(params[:id])
-    if @startupheader.update_attributes(params[:startupheader])
+    if @startupheader.update_attributes(startupheader_params)
       respond_to do |format|
        format.html { redirect_to cms_path }
       end
@@ -46,6 +46,10 @@ class StartupheadersController < ApplicationController
     respond_to do |format|
       format.html { redirect_to cms_path }
     end
+  end
+  
+  def startupheader_params
+    params.require(:startupheader).permit(:title, :strapline)
   end
 
 end

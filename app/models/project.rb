@@ -1,5 +1,4 @@
 class Project < ActiveRecord::Base
-  attr_accessible :title, :challenge, :solution, :result, :image, :video_embed
   
   has_attached_file :image, styles: {
       thumb: '100x100>',
