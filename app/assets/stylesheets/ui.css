@@ -60,3 +60,5 @@
 @media (max-width: 380px) {
 	.modalVideo iframe {height:201px;}
 }
+
+a:hover, a:visited, a:active, a:link, a, li.scroll_btn.active {text-decoration:none;}
