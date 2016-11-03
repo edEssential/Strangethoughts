@@ -67,6 +67,7 @@ V1::Application.configure do
   
   config.paperclip_defaults = {
     :storage => :s3,
+    :s3_region => ENV['AWS_REGION'],
     :s3_credentials => {
       :bucket => ENV['S3_BUCKET_NAME'],
       :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
